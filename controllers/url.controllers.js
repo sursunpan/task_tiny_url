@@ -14,13 +14,13 @@ module.exports = {
         customAlias
       );
 
-      res.status(200).json({
+      return res.status(200).json({
         error: false,
         message: "Shortened URL created successfully",
         shortUrl: result.shortUrl,
       });
     } catch (err) {
-      res.status(400).json({
+      return res.status(400).json({
         error: true,
         message: err.message,
       });
@@ -40,10 +40,10 @@ module.exports = {
         req.ip
       );
 
-      res.redirect(originalUrl);
+      return res.redirect(originalUrl);
     } catch (err) {
       const status = err.message === "URL not found" ? 404 : 500;
-      res.status(status).json({
+      return res.status(status).json({
         error: true,
         message: err.message,
       });
@@ -55,12 +55,12 @@ module.exports = {
       const { id: userId } = req.user;
       const urls = await urlService.getUsersUrls(userId);
 
-      res.status(200).json({
+      return res.status(200).json({
         error: false,
         urls,
       });
     } catch (err) {
-      res.status(500).json({
+      return res.status(500).json({
         error: true,
         message: err.message,
       });
