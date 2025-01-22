@@ -6,8 +6,8 @@ services:
     ports:
       - "8080:8000"
     environment:
-      - MONGODB_CONNECTION_STRING=mongodb://mongodb:27017/tinyUrl
-      - REDIS_HOST=redis
+      - MONGODB_CONNECTION_STRING=mongodb+srv://impsuraj1996:tIKCktdcnKeTgN17@tinuurl.zhlw9.mongodb.net/?retryWrites=true&w=majority&appName=tinuurll
+      - REDIS_HOST=red-cu8kgh9opnds73d74ko0
       - REDIS_PORT=6379
       - PORT=8000
       - APP_SECRET=MYSELFSURAJ

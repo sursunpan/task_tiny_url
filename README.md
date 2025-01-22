@@ -60,7 +60,7 @@ A high-performance URL shortening service built with modern technologies. This s
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:sursunpan/task_tiny_url.git
 cd service
 ```
 
@@ -76,7 +76,7 @@ cp .env.example .env
 docker compose up
 ```
 
-The service will be available at `http://localhost:8080`
+The service will be available at `https://task-tiny-url.onrender.com`
 
 ### Local Development Setup
 
