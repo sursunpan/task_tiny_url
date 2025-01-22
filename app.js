@@ -1,5 +1,4 @@
 const express = require("express");
-const createError = require("http-errors");
 const mongoose = require("mongoose");
 const authRoute = require("./api/auth.api");
 const analyticsRoute = require("./api/analytics.api");
@@ -27,9 +26,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/auth", authRoute);
 app.use("/analytics", analyticsRoute);
 app.use("/url", urlRoute);
-
-app.use((req, res, next) => {
-  next(createError(404));
-});
 
 module.exports = app;
